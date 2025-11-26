@@ -1,0 +1,13 @@
+command /bonk [<player>]:
+    permission: essentials.troll.bonk
+    permission message: &cI'm sorry, you don't have permission.
+    trigger:
+        if arg-1 is not set:
+            set {_target} to player
+        else: 
+            set {_target} to arg-1
+
+        push {_target} upwards at speed 3
+        send "&7You have been &cBONKED&7 by &b%player%" to arg-1
+        send "&b%{_target}%&7 has been sent to space." to player
+        apply resistance 5 to {_target} for 5 seconds
