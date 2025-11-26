@@ -1,0 +1,104 @@
+command /gamemode <text> [<player>]:
+    description: Change your gamemode
+    usage: /gamemode <survival|creative|adventure|spectator> [player]
+    permission: essentials.gamemode
+    permission message: &cI'm sorry, you don't have permission.
+    trigger:
+        set {_mode} to argument 1
+        set {_target} to argument 2
+
+        if {_target} is not set:
+            set {_target} to player
+
+        # CREATIVE
+        if {_mode} is "creative":
+            set {_target}'s gamemode to creative
+            send "&7The target's gamemode is now &bCreative"
+            stop
+        if {_mode} is "c":
+            set {_target}'s gamemode to creative
+            send "&7The target's gamemode is now &bCreative"
+            stop
+
+        # SURVIVAL
+        if {_mode} is "survival":
+            set {_target}'s gamemode to survival
+            send "&7The target's gamemode is now &bSurvival"
+            stop
+        if {_mode} is "s":
+            set {_target}'s gamemode to survival
+            send "&7The target's gamemode is now &bSurvival"
+            stop
+
+        # ADVENTURE
+        if {_mode} is "adventure":
+            set {_target}'s gamemode to adventure
+            send "&7The target's gamemode is now &bAdventure"
+            stop
+        if {_mode} is "a":
+            set {_target}'s gamemode to adventure
+            send "&7The target's gamemode is now &bAdventure"
+            stop
+
+        # SPECTATOR
+        if {_mode} is "spectator":
+            set {_target}'s gamemode to spectator
+            send "&7The target's gamemode is now &bSpectator"
+            stop
+        if {_mode} is "sp":
+            set {_target}'s gamemode to spectator
+            send "&7The target's gamemode is now &bSpectator"
+            stop
+        
+        send "&cSorry, an unknown error occured while trying to complete this command" to player
+
+command /gmc [<player>]:
+    description: Change your gamemode to creative
+    permission: essentials.gamemode
+    permission message: &cI'm sorry, you don't have permission.
+    trigger:
+        set {_target} to argument 1
+        if {_target} is not set:
+            set {_target} to player
+
+        set {_target}'s gamemode to creative
+        send "&7The target's gamemode is now &bCreative"
+        
+
+command /gms [<player>]:
+    description: Change your gamemode to survival
+    permission: essentials.gamemode
+    permission message: &cI'm sorry, you don't have permission.
+    trigger:
+        set {_target} to argument 1
+        if {_target} is not set:
+            set {_target} to player
+
+        set {_target}'s gamemode to survival
+        send "&7The target's gamemode is now &bSurvival"
+        
+command /gma [<player>]:
+    description: Change your gamemode to adventure
+    permission: essentials.gamemode
+    permission message: &cI'm sorry, you don't have permission.
+    trigger:
+        set {_target} to argument 1
+        if {_target} is not set:
+            set {_target} to player
+
+        set {_target}'s gamemode to adventure
+        send "&7The target's gamemode is now &bAdventure"
+        
+
+command /gmsp [<player>]:
+    description: Change your gamemode to spectator
+    permission: essentials.gamemode
+    permission message: &cI'm sorry, you don't have permission.
+    trigger:
+        set {_target} to argument 1
+        if {_target} is not set:
+            set {_target} to player
+
+        set {_target}'s gamemode to spectator
+        send "&7The target's gamemode is now &bSpectator"
+        

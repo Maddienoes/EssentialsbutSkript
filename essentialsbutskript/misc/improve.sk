@@ -1,0 +1,4 @@
+command /improve:
+    aliases: /improveessentials
+    trigger:
+        send "&7We would love to have you help us develop Essentials but Skript, please go to <link:https://essentials.madds.lol/improve>&bour website <reset> &7to find out more" to player

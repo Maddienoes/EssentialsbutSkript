@@ -1,0 +1,5 @@
+command /essentialsversion:
+    aliases: /eversion
+    trigger:
+        send "&7You're running &bEssentials but Skript V0-ALPHA1" to player
+        send "&7If you'd like to help with the development of this Skript, run &b/improve" to player
